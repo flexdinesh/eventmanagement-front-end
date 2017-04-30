@@ -1,6 +1,8 @@
 angular.module('AdminService', []).factory('Admin', ['$http', function($http) {
 
-        var endpoint = "http://127.0.0.1:3000";
+        // var endpoint = "http://127.0.0.1:3000";
+        var endpoint = "https://eventmanagement-rest-api.herokuapp.com";
+        
         var wrapper = {};
         wrapper.isAuthenticated = false;
         wrapper.registrations = [];
