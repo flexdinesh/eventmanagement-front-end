@@ -7,7 +7,7 @@ An Angular.js based Front-End for Event Registration Management
 1. Node.js with Express.js serves the html views to the user
 2. Angular MVC controlled pages
 3. Bootstrap 4 components and styles
-4. Highcharts framework for registration pie chart
+4. Highcharts library for registration pie chart
 5. Deploy ready
 
 ## Key Takeaways
