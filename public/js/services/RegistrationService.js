@@ -1,7 +1,7 @@
 angular.module('RegistrationService', []).factory('Registration', ['$http', function($http) {
 
-    // var endpoint = "http://127.0.0.1:3000";
-    var endpoint = "https://eventmanagement-rest-api.herokuapp.com";
+    var endpoint = "http://127.0.0.1:3000";
+    // var endpoint = "https://eventmanagement-rest-api.herokuapp.com";
     var wrapper = {};
     wrapper.events = [];
 

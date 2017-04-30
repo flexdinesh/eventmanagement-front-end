@@ -3,11 +3,6 @@ angular.module('AdminCtrl', ['AdminService']).controller('AdminController', func
 	$scope.isAuthenticated = Admin.isAuthenticated;
 	// $scope.isAuthenticated = true;
 
-	//initializing registrations list
-	Admin.getAllRegistrations(function(data) {
-		$scope.registrations = data;
-	});
-
 	$scope.login = function() {
 
 		var data = {
@@ -19,10 +14,15 @@ angular.module('AdminCtrl', ['AdminService']).controller('AdminController', func
 
 		Admin.login(data, function(response) {
 			if (response) {
+				console.log("Authentication Success!");
 				Admin.isAuthenticated = response;
 				$scope.isAuthenticated = Admin.isAuthenticated;
+				Admin.getAllRegistrations(function(data) {
+					$scope.registrations = data;
+				});
+			} else {
+				console.log("Authentication Failure!");
 			}
-			console.log(response);
 		});
 
 	};
@@ -36,9 +36,19 @@ angular.module('AdminCtrl', ['AdminService']).controller('AdminController', func
 
 	};
 
-	$scope.initChart = function() {
+	$scope.initRegistrationTable = function() {
+		//initializing registrations table
+		Admin.getAllRegistrations(function(data) {
+			$scope.registrations = data;
+		});
+	};
 
-		loadChart(Admin.registrations);
+	$scope.initRegistrationChart = function() {
+		Admin.registrations = [];
+		//initializing registrations pie chart
+		Admin.getAllRegistrations(function(data) {
+			loadChart(data);
+		});
 
 	};
 

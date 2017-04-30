@@ -26,17 +26,22 @@
 	<script src="js/services/RegistrationService.js"></script>
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
 	<script src="js/scripts/handlers.js"></script>
+	<script src="js/scripts/util.js"></script>
+
+
 </head>
 <body ng-app="sampleApp" ng-controller="MainController">
 <div class="container">
 	
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
-	    <a class="nav-link active" href="/" ng-click="navOnClickHandler(event);">Home</a>
+	    <a class="nav-link active" href="/" ng-click="navOnClickHandler($event);" id="home-nav">Home</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="/admin" ng-click="navOnClickHandler(event);">Admin</a>
+	    <a class="nav-link" href="/admin" ng-click="navOnClickHandler($event);">Admin</a>
 	  </li>
 	</ul>
 	<div ng-view></div>

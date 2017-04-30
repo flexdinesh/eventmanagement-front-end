@@ -32,13 +32,18 @@ angular.module('MainCtrl', ['AdminService', 'RegistrationService']).controller('
 			$("#"+el._id).addClass("active");
 			$scope.activeEventId = el._id;
 			$scope.activeEventname = el.name;
+
+			$scope.fullname = null;
+			$scope.mobile = null;
+			$scope.email = null;
+			$scope.selectedtype = $scope.registrationtypes[0];
+			$scope.ticketcount = 1;
 	};
 
-	$scope.navOnClickHandler = function(el) {
-		$(".nav-item").on("click", function() {
+	$scope.navOnClickHandler = function($event) {
 			$(".nav-link").removeClass("active");
-			$(this).addClass("active");
-		});
+			console.log(angular.element($event.currentTarget));
+			$(angular.element($event.currentTarget)).addClass("active");
 	};
 
 	$scope.submit = function() {
