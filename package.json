@@ -4,7 +4,7 @@
     "description": "Angular.js based front-end",
     "author": "Dinesh",
     "scripts": {
-        "start": "node app.js"
+        "start": "node server.js"
     },
     "dependencies": {
         "express": "~4.5.1",
