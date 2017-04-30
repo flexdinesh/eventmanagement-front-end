@@ -1,0 +1,35 @@
+/*body { padding-top:30px; }*/
+
+.table td,
+.table th {
+    text-align: center;
+}
+
+.reg-form-container {
+    /*border-width: .2rem;*/
+}
+
+.container {
+    padding: 1.5rem;
+    /*margin-right: 0;*/
+    /*margin-bottom: 0;*/
+    /*margin-left: 0;*/
+    border-width: .2rem;
+}
+
+.nav {
+    /*padding-bottom: 1.5rem;*/
+}
+
+.nav nav-tabs {
+	border-bottom: 1px solid #ddd;
+}
+
+.reg-form-container, .admin-container {
+	padding-top: 1.5rem;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

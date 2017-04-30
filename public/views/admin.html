@@ -1,0 +1,47 @@
+<div class="admin-container">
+    <div class="row login-container" ng-if="!isAuthenticated">
+        <div class="col-md-4 col-centered">
+            <form id="login-form " ng-submit="login()">
+                <div class="form-group row">
+                    <label for="username" class="col-3 col-form-label">Username</label>
+                    <div class="col-9">
+                        <input class="form-control" type="text" value="" id="username" ng-model="username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="username" class="col-3 col-form-label">Password</label>
+                    <div class="col-9">
+                        <input class="form-control" type="password" value="" id="password" ng-model="password">
+                    </div>
+                </div>
+                <button type="submit " class="btn btn-primary" style="float:right">Login</button>
+            </form>
+        </div>
+    </div>
+    <div ng-if="isAuthenticated">
+        <h6>Hello, Admin!</h6>
+        <div class="panel panel-default">
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>Reg. No.</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Tickets</th>
+                    <th>Event</th>
+                </tr>
+                <tr ng-repeat="registration in registrations">
+                    <td>{{registration.regid}}</td>
+                    <td>{{registration.name}}</td>
+                    <td>{{registration.mobile}}</td>
+                    <td>{{registration.email}}</td>
+                    <td>{{registration.type}}</td>
+                    <td>{{registration.ticketcount}}</td>
+                    <td>{{registration._event.name}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

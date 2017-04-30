@@ -1,0 +1,21 @@
+<div>
+	<h3>All Loans</h3>
+
+	<div class="panel panel-default">
+	  <!-- Table -->
+	  <table class="table">
+	  	<tr>
+	  	<th>Amount</th>
+	  	<th>Interest</th>
+	  	<th>Monthy Due</th>
+	  	<th>Borrower Id</th>
+	  	</tr>
+	    <tr ng-repeat="loan in loans">
+	    <td>{{loan.amount}}</td>
+	    <td>{{loan.interest}}</td>
+	    <td>{{loan.monthlydue}}</td>
+	    <td>{{loan.userid}}</td>
+	    </tr>
+	  </table>
+	</div>
+</div>

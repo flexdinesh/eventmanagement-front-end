@@ -1,0 +1,1 @@
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'LoanCtrl', 'LoanService', 'BorrowerCtrl', 'BorrowerService', 'AdminCtrl', 'AdminService', 'RegistrationService']);
