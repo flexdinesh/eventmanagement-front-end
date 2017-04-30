@@ -1,6 +1,8 @@
 # Event Management Front
 An Angular.js based Front-End for Event Registration Management
 
+#### App deployed at Heroku - https://eventmanagement-front-end.herokuapp.com/
+
 ## Stacks and Frameworks
 1. Node.js with Express.js serves the html views to the user
 2. Angular MVC controlled pages
