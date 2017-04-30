@@ -1,7 +1,7 @@
 # Event Management Front
 An Angular.js based Front-End for Event Registration Management
 
-## Stack and Frameworks
+## Stacks and Frameworks
 1. Node.js with Express.js serves the html views to the user
 2. Angular MVC controlled pages
 3. Bootstrap 4 components and styles
@@ -17,15 +17,17 @@ An Angular.js based Front-End for Event Registration Management
 4. Admin page prompts for authentication if the admin is not logged in
 5. Admin can swtich between the views once logged in without losing the session details
 6. Once admin logs in login form disappears and registration pie chart and a list of all registrations are shown
-7. When the user logs out registration pie chart and list are hidden and login form appears again
+7. Pie chart shows the number of registrations with respect to events
+8. When the user logs out registration pie chart and list are hidden and login form appears again
 
 #### Admin Credentials - admin/adminpass
 
-### Caveats
-1. Registration preview is yet to be implemented
-2. Form validations are yet to be implemented
+### Implementation Pending
+1. Registration preview
+2. Form validations
 3. Admin login fail - right error message need to be shown
-
+4. User photo upload
+5. Ticekts count input control based on registration type
 
 ## Instructions to run the app in local
 To run the app, navigate to the project directory in terminal/shell and run the following commands
