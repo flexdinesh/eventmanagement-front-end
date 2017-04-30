@@ -1,6 +1,11 @@
 {
-  "name": "starter-node-angular",
-  "main": "server.js",
+  "name": "eventmanagement-front-end",
+    "version": "1.0.0",
+    "description": "Angular.js based front-end",
+    "author": "Dinesh",
+    "scripts": {
+        "start": "node app.js"
+    },
   "dependencies": {
     "express" : "~4.5.1",
 	"body-parser" : "~1.4.2",
