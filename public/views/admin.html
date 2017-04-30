@@ -19,7 +19,11 @@
         </div>
     </div>
     <div ng-if="isAuthenticated">
-        <h6>Hello, Admin!</h6>
+        <div class="pad-around">
+            <button type="button " class="btn btn-primary col-right " ng-click="logout()">Logout</button>
+            <h4>Hello, Admin!</h4>
+        </div>
+        <div id="chart-container" ng-init="initChart()"></div>
         <div class="panel panel-default">
             <!-- Table -->
             <table class="table">

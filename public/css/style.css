@@ -22,14 +22,36 @@
 }
 
 .nav nav-tabs {
-	border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-.reg-form-container, .admin-container {
-	padding-top: 1.5rem;
+.reg-form-container,
+.admin-container {
+    padding-top: 1.5rem;
 }
 
-.col-centered{
+.col-centered {
     float: none;
     margin: 0 auto;
+}
+
+.col-right {
+    float: right;
+    margin: 0 auto;
+}
+
+#reg-alert {
+    margin-top: 1.5rem;
+}
+
+.pad-around {
+    padding: 1rem;
+}
+
+#chart-container {
+    min-width: 310px;
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }

@@ -1,4 +1,4 @@
-angular.module('MainCtrl', ['BorrowerService', 'LoanService', 'AdminService', 'RegistrationService']).controller('MainController', function($scope, Borrower, Loan, Admin, Registration) {
+angular.module('MainCtrl', ['AdminService', 'RegistrationService']).controller('MainController', function($scope, Admin, Registration) {
 
 	$scope.tagline = 'Hi there!';
 
@@ -55,6 +55,8 @@ angular.module('MainCtrl', ['BorrowerService', 'LoanService', 'AdminService', 'R
 
 		Registration.addRegistration(data, function(data) {
 			console.log(data);
+			$scope.showRegistrationSuccess = true;
+			$scope.regid = data;
 		});
 
 	};

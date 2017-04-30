@@ -1,7 +1,9 @@
 <div class="reg-form-container">
     <div class="row">
         <div class="col-md-4">
-        	<h4>Events</h4>
+        	<div class="pad-around">
+        		<h4>Events</h4>
+        	</div>
             <div class="list-group">
             	<tr ng-repeat="registration in registrations">
             	<a href="#" class="list-group-item " ng-class="{'active': {{$index}}==0}" ng-repeat="event in events" id="{{event._id}}" ng-click="listOnClickHandler(event);">{{event.name}}</a>
@@ -9,7 +11,9 @@
 		</div>
     </div>
     <div class="col-md-8 ">
-    	<h4>Register for - {{activeEventname}}</h4>
+    	<div class="pad-around">
+    		<h4>Register for - {{activeEventname}}</h4>
+    	</div>
     	<form id="registration-form " ng-submit="submit()">
 			<div class="form-group row ">
 			    <label for="fullname " class="col-md-3 col-form-label ">Full Name</label>
@@ -50,6 +54,10 @@
 
 		  <button type="submit " class="btn btn-primary ">Submit</button>
 		</form>
+
+		<div id="reg-alert" class="alert alert-success" role="alert" ng-if="showRegistrationSuccess">
+		    <strong>Well done!</strong> Registration successful. Please note your reg id - {{regid}}.
+		</div>
     </div>
   </div>
 </div>
