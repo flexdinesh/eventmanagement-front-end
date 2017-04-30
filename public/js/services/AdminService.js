@@ -1,12 +1,12 @@
 angular.module('AdminService', []).factory('Admin', ['$http', function($http) {
 
+        var endpoint = "http://127.0.0.1:3000";
         var wrapper = {};
         wrapper.isAuthenticated = false;
-
         wrapper.registrations = [];
 
         wrapper.getAllRegistrations = function(callback) {
-            $http.get("http://127.0.0.1:3000/registration/getallregistrations")
+            $http.get(endpoint + "/registration/getallregistrations")
                 .then(function(response) {
                     wrapper.registrations = response.data;
                     callback(response.data);
@@ -15,7 +15,7 @@ angular.module('AdminService', []).factory('Admin', ['$http', function($http) {
 
         wrapper.login = function(data, callback) {
             $http({
-                    url: "http://127.0.0.1:3000/auth/login",
+                    url: endpoint + "/auth/login",
                     method: "POST",
                     data: data,
                     headers: {
@@ -30,7 +30,7 @@ angular.module('AdminService', []).factory('Admin', ['$http', function($http) {
         }
 
         wrapper.logout = function(callback) {
-            $http.get("http://127.0.0.1:3000/auth/logout")
+            $http.get(endpoint + "/auth/logout")
                 .then(function(response) {
                     callback(response.data);
                     wrapper.isAuthenticated = false;
