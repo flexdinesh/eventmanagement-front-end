@@ -42,7 +42,6 @@ angular.module('MainCtrl', ['AdminService', 'RegistrationService']).controller('
 
 	$scope.navOnClickHandler = function($event) {
 			$(".nav-link").removeClass("active");
-			console.log(angular.element($event.currentTarget));
 			$(angular.element($event.currentTarget)).addClass("active");
 	};
 
